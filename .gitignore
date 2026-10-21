@@ -1,0 +1,13 @@
+# 本地测试、私人角色图：绝对不上传
+_local/
+models/*
+!models/README.md
+model/
+
+# 生成物
+build/
+dist/
+__pycache__/
+*.pyc
+*.spec
+.venv/

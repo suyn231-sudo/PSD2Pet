@@ -1,0 +1,21 @@
+PSD2Pet 用到的第三方库 / Third-party libraries used by PSD2Pet
+
+打包好的 exe 里包含前五个；psd-tools、Pillow 只在导入 PSD 时用，不进 exe。
+The packaged exe bundles the first five; psd-tools and Pillow are only used by the importer.
+
+PySide6 / Qt 6 / shiboken6   LGPL-3.0     https://www.qt.io/qt-for-python
+  exe 里是动态链接的 Qt DLL，没有改动。你可以在 _internal\PySide6 里换成自己编译的同版本 DLL。
+  Qt is dynamically linked and unmodified; you may replace the DLLs in _internal\PySide6.
+  Qt 源码 / source: https://download.qt.io/official_releases/qt/
+pynput                      LGPL-3.0     https://github.com/moses-palmer/pynput
+  以未修改的 Python 模块形式包含，可在 _internal 里替换。Included unmodified; replaceable.
+NumPy                       BSD-3-Clause https://numpy.org
+OpenCV (opencv-python-headless) Apache-2.0 https://opencv.org
+sounddevice (+ PortAudio)   MIT          https://github.com/spatialaudio/python-sounddevice
+psd-tools                   MIT          https://github.com/psd-tools/psd-tools
+Pillow                      MIT-CMU      https://python-pillow.org
+PyInstaller (bootloader)    GPL-2.0 with bootloader exception — the exception allows distributing the exe
+                            under any license. https://pyinstaller.org
+
+各库的完整许可证文本在它们的项目主页，也随 pip 安装在 site-packages\<库名>-*.dist-info 里。
+Full license texts are on each project's homepage and in site-packages\<name>-*.dist-info.
